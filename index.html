@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAF Foundation - Stewards of AI Context</title>
+    <meta name="description" content="The FAF Foundation stewards the Foundational AI-context Format - an open standard for project DNA that works with any AI.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2300bf63'/><path d='M30 50 L45 65 L70 35' stroke='white' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+    <style>
+        :root {
+            --accent: #00bf63;
+            --accent-hover: #00a855;
+            --accent-bright: #00ff88;
+            --bg-primary: #fefcf8;
+            --bg-secondary: #f9f6f1;
+            --dark: #1a1a1a;
+            --gray: #4a4a4a;
+            --muted: #7a7a7a;
+            --border: #e5e5e5;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--gray);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            position: relative;
+        }
+
+        .logo-icon .check {
+            transition: opacity 0.3s ease;
+        }
+
+        .logo-icon .smiley {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo:hover .logo-icon .check {
+            opacity: 0;
+        }
+
+        .logo:hover .logo-icon .smiley {
+            opacity: 1;
+        }
+
+        .notice-bar {
+            background: repeating-linear-gradient(
+                -45deg,
+                #ffc107,
+                #ffc107 10px,
+                #000 10px,
+                #000 20px
+            );
+            text-align: center;
+            padding: 0.6rem;
+            font-size: 0.9rem;
+        }
+
+        .notice-bar span {
+            background: #ffc107;
+            color: #000;
+            padding: 0.3rem 1rem;
+            font-weight: bold;
+            font-family: monospace;
+            letter-spacing: 0.05em;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%);
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            color: var(--accent-bright);
+            margin-bottom: 3rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-bright);
+            border: 2px solid var(--accent-bright);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-bright);
+            color: var(--dark);
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 5rem 0;
+            background: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mission-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .mission-card {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .mission-card h3 {
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .mission-card p {
+            color: var(--gray);
+        }
+
+        /* Pillars Section */
+        .pillars {
+            padding: 5rem 0;
+            background: var(--bg-secondary);
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .pillar-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pillar-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .pillar-card h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Resources Section */
+        .resources {
+            padding: 5rem 0;
+            background: var(--white);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .resource-card {
+            border: 2px solid var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .resource-card:hover {
+            border-color: var(--accent-bright);
+        }
+
+        .resource-card h4 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .resource-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .resource-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .resource-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Governance Section */
+        .governance {
+            padding: 5rem 0;
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .governance .section-title {
+            color: var(--white);
+        }
+
+        .governance .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .governance-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .governance-text h3 {
+            color: var(--accent-bright);
+            margin-bottom: 1rem;
+        }
+
+        .governance-text p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .governance-list {
+            list-style: none;
+        }
+
+        .governance-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .governance-list li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Timeline Section */
+        .timeline {
+            padding: 5rem 0;
+            background: var(--white);
+        }
+
+        .timeline-items {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-date {
+            flex: 0 0 120px;
+            font-weight: bold;
+            color: var(--accent);
+            text-align: right;
+        }
+
+        .timeline-content {
+            flex: 1;
+            padding-bottom: 2rem;
+            border-left: 2px solid var(--bg-secondary);
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: "";
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            background: var(--accent-bright);
+            border-radius: 50%;
+        }
+
+        .timeline-content h4 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Join Section */
+        .join {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .join h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .join p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .join .btn-secondary {
+            border-color: var(--white);
+            color: var(--white);
+        }
+
+        .join .btn-secondary:hover {
+            background: var(--white);
+            color: var(--accent);
+        }
+
+        .join-form {
+            max-width: 500px;
+            margin: 2rem auto 0;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-row input[type="email"] {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .form-row input[type="email"]:focus {
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+        }
+
+        .btn-form {
+            background: var(--white);
+            color: var(--accent);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-form:hover {
+            background: var(--bg-secondary);
+            transform: translateY(-2px);
+        }
+
+        .form-options {
+            text-align: left;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            padding: 0.3rem 0;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-bright);
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .governance-content {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .timeline-date {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Notice Bar -->
+    <div class="notice-bar">
+        <span>/// Humans + AI at Work ///</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-content">
+            <a href="/" class="logo">
+                <svg class="logo-icon" viewBox="0 0 100 100">
+                    <!-- Green checkmark (default) -->
+                    <g class="check">
+                        <circle cx="50" cy="50" r="45" fill="#00bf63"/>
+                        <path d="M30 50 L45 65 L70 35" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <!-- Orange smiley (hover) -->
+                    <g class="smiley">
+                        <circle cx="50" cy="50" r="45" fill="#FF6B35"/>
+                        <circle cx="35" cy="40" r="5" fill="white"/>
+                        <circle cx="65" cy="40" r="5" fill="white"/>
+                        <path d="M30 60 Q50 80 70 60" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+                    </g>
+                </svg>
+                FAF <span>Foundation</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#governance">Governance</a></li>
+                <li><a href="#join">Join</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>FAF <span>Foundation</span></h1>
+            <p class="subtitle">Stewards of the Foundational AI-context Format</p>
+            <p class="tagline">Open governance for an open standard</p>
+            <div class="cta-buttons">
+                <a href="#join" class="btn btn-primary">Get Involved</a>
+                <a href="https://github.com/anthropics/claude-code" class="btn btn-secondary">View Specification</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission" id="mission">
+        <div class="container">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="section-subtitle">To steward FAF as an open, vendor-neutral standard that enables any AI to understand any project.</p>
+
+            <div class="mission-content">
+                <div class="mission-card">
+                    <h3>Open Standard</h3>
+                    <p>FAF is and will always be an open standard. The specification is MIT-licensed, allowing anyone to implement, extend, and build upon it without restriction.</p>
+                </div>
+                <div class="mission-card">
+                    <h3>Vendor Neutral</h3>
+                    <p>Works with Claude, GPT, Grok, Gemini, and any future AI. No lock-in, no proprietary extensions that fragment the ecosystem.</p>
+                </div>
+                <div class="mission-card">
+                    <h3>Community Driven</h3>
+                    <p>Evolution of the format is guided by real-world usage from developers, AI companies, and tool makers who use FAF daily.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars Section -->
+    <section class="pillars" id="pillars">
+        <div class="container">
+            <h2 class="section-title">Foundation Pillars</h2>
+            <p class="section-subtitle">The principles that guide our work</p>
+
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">🏎️</div>
+                    <h3>Speed</h3>
+                    <p>F1-inspired engineering. Fast iteration, fast SDKs, fast adoption without sacrificing quality.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🎯</div>
+                    <h3>Precision</h3>
+                    <p>Strict specifications, comprehensive tests, zero ambiguity. The format works exactly as documented.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🌍</div>
+                    <h3>Universality</h3>
+                    <p>Any language, any AI, any scale. From solo developer to enterprise team.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🔓</div>
+                    <h3>Openness</h3>
+                    <p>Open source, open governance, open participation. No barriers to entry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources" id="resources">
+        <div class="container">
+            <h2 class="section-title">Resources</h2>
+            <p class="section-subtitle">Official SDKs, specifications, and tools</p>
+
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h4>📄 Format Specification</h4>
+                    <p>The official FAF v2.5 specification document with examples and validation rules.</p>
+                    <a href="#" class="resource-link">Read Specification →</a>
+                </div>
+                <div class="resource-card">
+                    <h4>🦀 Rust SDK</h4>
+                    <p>High-performance Rust implementation. Published on crates.io.</p>
+                    <a href="https://crates.io/crates/faf-rust-sdk" class="resource-link">View on crates.io →</a>
+                </div>
+                <div class="resource-card">
+                    <h4>🐍 Python SDK</h4>
+                    <p>Full-featured Python implementation with validation. Published on PyPI.</p>
+                    <a href="https://pypi.org/project/faf-python-sdk" class="resource-link">View on PyPI →</a>
+                </div>
+                <div class="resource-card">
+                    <h4>📦 TypeScript SDK</h4>
+                    <p>Official TypeScript/JavaScript implementation. Published on npm.</p>
+                    <a href="#" class="resource-link">View on npm →</a>
+                </div>
+                <div class="resource-card">
+                    <h4>🔧 Claude MCP Server</h4>
+                    <p>Official MCP server for Claude Desktop integration.</p>
+                    <a href="#" class="resource-link">Installation Guide →</a>
+                </div>
+                <div class="resource-card">
+                    <h4>💻 CLI Tool</h4>
+                    <p>Command-line interface for creating and validating FAF files.</p>
+                    <a href="https://fafcli.dev" class="resource-link">Visit fafcli.dev →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Governance Section -->
+    <section class="governance" id="governance">
+        <div class="container">
+            <h2 class="section-title">Governance</h2>
+            <p class="section-subtitle">How the Foundation operates</p>
+
+            <div class="governance-content">
+                <div class="governance-text">
+                    <h3>Modeled After Rust Foundation</h3>
+                    <p>The FAF Foundation follows the successful governance model established by the Rust Foundation - transparent, community-driven, and focused on long-term sustainability.</p>
+                    <p>Key governance areas:</p>
+                    <ul class="governance-list">
+                        <li>Specification evolution and versioning</li>
+                        <li>Official SDK maintenance</li>
+                        <li>IANA registration stewardship</li>
+                        <li>Community standards and best practices</li>
+                        <li>Enterprise licensing guidance</li>
+                    </ul>
+                </div>
+                <div class="governance-text">
+                    <h3>Licensing</h3>
+                    <p>The FAF specification and reference implementations are MIT-licensed, providing maximum flexibility for adoption.</p>
+                    <p>Enterprise options available for organizations requiring:</p>
+                    <ul class="governance-list">
+                        <li>Priority support and SLAs</li>
+                        <li>Custom integrations</li>
+                        <li>Training and consultation</li>
+                        <li>Roadmap influence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline" id="timeline">
+        <div class="container">
+            <h2 class="section-title">Milestones</h2>
+            <p class="section-subtitle">Key moments in FAF history</p>
+
+            <div class="timeline-items">
+                <div class="timeline-item">
+                    <div class="timeline-date">Sep 2025</div>
+                    <div class="timeline-content">
+                        <h4>Format Created</h4>
+                        <p>FAF specification v1.0 published. Initial TypeScript implementation.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Oct 2025</div>
+                    <div class="timeline-content">
+                        <h4>IANA Registration</h4>
+                        <p>application/vnd.faf+yaml registered with IANA. Official MIME type established.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Nov 2025</div>
+                    <div class="timeline-content">
+                        <h4>Multi-Language SDKs</h4>
+                        <p>Rust SDK published to crates.io. Python SDK published to PyPI.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2026</div>
+                    <div class="timeline-content">
+                        <h4>Foundation Formation</h4>
+                        <p>FAF Foundation formally established with charter and governance structure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section class="join" id="join">
+        <div class="container">
+            <h2>Join the Foundation</h2>
+            <p>Help shape the future of AI context standards</p>
+
+            <form class="join-form" action="https://formspree.io/f/team@faf.one" method="POST">
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-form">Subscribe</button>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="contribute" value="yes">
+                        <span>I want to contribute to FAF development</span>
+                    </label>
+                </div>
+                <input type="hidden" name="_subject" value="FAF Foundation - New Signup">
+            </form>
+
+            <div class="cta-buttons" style="margin-top: 2rem;">
+                <a href="https://github.com/anthropics/claude-code" class="btn btn-secondary">GitHub</a>
+                <a href="https://discord.gg/faf" class="btn btn-secondary">Discord</a>
+                <a href="mailto:team@faf.one" class="btn btn-secondary">Contact</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Foundation</h4>
+                    <ul>
+                        <li><a href="#mission">Mission</a></li>
+                        <li><a href="#governance">Governance</a></li>
+                        <li><a href="#timeline">History</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Specification</a></li>
+                        <li><a href="#">SDKs</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">License (MIT)</a></li>
+                        <li><a href="#">Trademark Policy</a></li>
+                        <li><a href="#">Code of Conduct</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FAF Foundation. Open source under MIT License.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

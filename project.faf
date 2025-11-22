@@ -1,0 +1,37 @@
+faf_version: 2.5.0
+ai_score: "85%"
+project:
+  name: faf-foundation-site
+  goal: Official website for the FAF Foundation - stewards of the AI context standard
+  main_language: HTML
+  version: 1.0.0
+  license: MIT
+
+instant_context:
+  what_building: Static website for FAF Foundation governance and resources
+  tech_stack: HTML, CSS, vanilla JavaScript
+  deployment: Static hosting (Vercel/Netlify/GitHub Pages)
+  key_files:
+    - index.html
+  commands:
+    dev: "open index.html"
+    build: "echo 'Static site - no build required'"
+
+stack:
+  frontend: HTML/CSS
+  styling: CSS Variables (fafcli.dev design system)
+
+human_context:
+  who: FAF community and potential adopters
+  prefer: Clean, professional design matching fafcli.dev colors
+  avoid: Complex build systems, excessive JavaScript
+
+state:
+  phase: development
+  progress: Initial site created
+
+tags:
+  - foundation
+  - governance
+  - website
+  - static-site
