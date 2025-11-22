@@ -102,6 +102,63 @@
             position: relative;
             overflow: hidden;
             line-height: 1.2;
+            cursor: pointer;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 500px;
+            margin: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-content h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .modal-content p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .modal-close {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: var(--accent-hover);
         }
 
         .notice-bar::before,
@@ -607,7 +664,7 @@
 </head>
 <body>
     <!-- Notice Bar -->
-    <div class="notice-bar">
+    <div class="notice-bar" onclick="document.getElementById('wipModal').classList.add('active')">
         HUMANS w/AI at Work
     </div>
 
@@ -892,5 +949,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- WIP Modal -->
+    <div id="wipModal" class="modal-overlay" onclick="if(event.target === this) this.classList.remove('active')">
+        <div class="modal-content">
+            <h3>Work in Progress</h3>
+            <p>This site is a work-in-progress. Some links may not have content yet. We appreciate your patience as we build the Foundation for .faf</p>
+            <button class="modal-close" onclick="document.getElementById('wipModal').classList.remove('active')">Got it</button>
+        </div>
+    </div>
 </body>
 </html>
