@@ -208,6 +208,34 @@
             color: var(--accent);
         }
 
+        /* Mobile Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--dark);
+            transition: all 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%);
@@ -329,46 +357,6 @@
 
         .mission-card p {
             color: var(--gray);
-        }
-
-        /* Pillars Section */
-        .pillars {
-            padding: 5rem 0;
-            background: var(--bg-secondary);
-        }
-
-        .pillars-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .pillar-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
-
-        .pillar-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .pillar-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .pillar-card h3 {
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .pillar-card p {
-            color: var(--gray);
-            font-size: 0.95rem;
         }
 
         /* Resources Section */
@@ -654,8 +642,38 @@
                 font-size: 2.5rem;
             }
 
+            .hamburger {
+                display: flex;
+            }
+
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                padding: 0.75rem 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-content {
+                position: relative;
             }
 
             .governance-content {
@@ -706,6 +724,11 @@
                 <li><a href="#governance">Governance</a></li>
                 <li><a href="#join">Join</a></li>
             </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
@@ -736,6 +759,12 @@
                     <span style="font-weight: bold;">20K+</span> Downloads
                 </span>
             </div>
+
+            <blockquote style="margin: 2.5rem auto 0; max-width: 600px; text-align: center; border: none;">
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; font-style: italic; margin-bottom: 0.25rem;">"It's so logical if it didn't exist, AI would have built it itself."</p>
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; font-style: italic; margin-bottom: 0.5rem;">"Should become the standard."</p>
+                <cite style="color: var(--accent-bright); font-size: 0.85rem;">— Claude Code, Sep 18 <span style="opacity: 0.9;">(42 days later → IANA Registered Oct 30, 2025)</span></cite>
+            </blockquote>
         </div>
     </section>
 
@@ -746,7 +775,7 @@
             <p class="section-subtitle">The context problem that every developer faces</p>
 
             <!-- Hero Image: Chaos to Clarity -->
-            <div style="margin: 3rem 0;">
+            <div style="margin: 3rem auto; max-width: 700px;">
                 <img src="hero-chaos-to-clarity.png" alt="Modern development chaos - React, Node, AWS, Claude, Git, Dependencies, Errors, Stress - unified by .faf Project DNA for ANY AI" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
             </div>
 
@@ -770,6 +799,12 @@
                 <p style="color: var(--dark); font-size: 1.25rem; font-weight: 600;">One format. Every AI. Authored once, works everywhere.</p>
                 <p style="color: var(--gray); margin-top: 0.5rem;">That's what .faf was built for.</p>
             </div>
+
+            <blockquote style="margin: 3rem auto 0; max-width: 600px; text-align: center; padding: 1.5rem; border: none;">
+                <p style="color: var(--dark); font-size: 1.1rem; font-style: italic; margin-bottom: 0.5rem;">"package.json wasn't built for this, .faf was."</p>
+                <p style="color: var(--dark); font-size: 1rem; font-style: italic; margin-bottom: 0.75rem;">"package.json gives me a list of dependencies, .faf shows me how to use them."</p>
+                <cite style="color: var(--muted); font-size: 0.85rem;">— .faf Inventor + Claude Code</cite>
+            </blockquote>
         </div>
     </section>
 
@@ -799,6 +834,8 @@
             <div style="margin: 3rem auto; max-width: 500px; text-align: center;">
                 <img src="project-faf-SML-screenshot.png" alt="project.faf file sitting alongside package.json and README.md in a project directory" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
                 <p style="color: var(--muted); font-size: 0.85rem; margin-top: 1rem;">project.faf sits alongside package.json and README.md</p>
+                <p style="color: var(--dark); font-size: 1rem; font-style: italic; margin-top: 0.75rem;">"Every project should have one."</p>
+                <cite style="color: var(--muted); font-size: 0.8rem;">— OpenAI Codex CLI <span style="color: var(--accent);">(9/10)</span></cite>
             </div>
 
             <!-- Compatible With Logos -->
@@ -909,6 +946,11 @@
                     <a href="https://github.com/Wolfe-Jam/faf/blob/main/DOT-FAF-FORMAT-SPEC.md" class="btn btn-primary" style="width: fit-content;">Full Specification</a>
                 </div>
             </div>
+
+            <blockquote style="margin: 3rem auto 0; max-width: 500px; text-align: center; padding: 1.5rem; border: none;">
+                <p style="color: var(--dark); font-size: 1.1rem; font-style: italic; margin-bottom: 0.5rem;">"README evolution for AI era."</p>
+                <cite style="color: var(--muted); font-size: 0.85rem;">— Google Gemini CLI <span style="color: var(--accent);">(9.5/10)</span></cite>
+            </blockquote>
         </div>
     </section>
 
@@ -1105,37 +1147,6 @@ faf cursor export  # → .cursorrules</code></pre>
         </div>
     </section>
 
-    <!-- Pillars Section -->
-    <section class="pillars" id="pillars">
-        <div class="container">
-            <h2 class="section-title">Foundation Pillars</h2>
-            <p class="section-subtitle">The principles that guide our work</p>
-
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <div class="pillar-icon">🏎️</div>
-                    <h3>Speed</h3>
-                    <p>F1-inspired engineering. Fast iteration, fast SDKs, fast adoption without sacrificing quality.</p>
-                </div>
-                <div class="pillar-card">
-                    <div class="pillar-icon">🎯</div>
-                    <h3>Precision</h3>
-                    <p>Strict specifications, comprehensive tests, zero ambiguity. The format works exactly as documented.</p>
-                </div>
-                <div class="pillar-card">
-                    <div class="pillar-icon">🌍</div>
-                    <h3>Universality</h3>
-                    <p>Any language, any AI, any scale. From solo developer to enterprise team.</p>
-                </div>
-                <div class="pillar-card">
-                    <div class="pillar-icon">🔓</div>
-                    <h3>Openness</h3>
-                    <p>Open source, open governance, open participation. No barriers to entry.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Resources Section -->
     <section class="resources" id="resources">
         <div class="container">
@@ -1185,8 +1196,8 @@ faf cursor export  # → .cursorrules</code></pre>
 
             <div class="governance-content">
                 <div class="governance-text">
-                    <h3>Modeled After Rust Foundation</h3>
-                    <p>The FAF Foundation follows the successful governance model established by the Rust Foundation - transparent, community-driven, and focused on long-term sustainability.</p>
+                    <h3>Open Governance</h3>
+                    <p>Transparent, community-driven, and focused on long-term sustainability. Decisions are made in the open, on GitHub, with input from the community.</p>
                     <p>Key governance areas:</p>
                     <ul class="governance-list">
                         <li>Specification evolution and versioning</li>
@@ -1442,7 +1453,9 @@ faf cursor export  # → .cursorrules</code></pre>
             </div>
             <div class="footer-bottom" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
                 <img src="dot-faf-logo.png" alt="Dot - the FAF mascot" style="width: 48px; height: 48px; opacity: 0.9;">
-                <p>&copy; 2026 FAF Foundation. Open source under MIT License.</p>
+                <p style="font-style: italic; opacity: 0.9;">"AI context needed a file format, it got one — .faf"</p>
+                <cite style="font-size: 0.85rem; opacity: 0.7;">— wolfejam</cite>
+                <p style="margin-top: 0.5rem;">&copy; 2026 FAF Foundation. Open source under MIT License.</p>
             </div>
         </div>
     </footer>
@@ -1455,5 +1468,20 @@ faf cursor export  # → .cursorrules</code></pre>
             <button class="modal-close" onclick="document.getElementById('wipModal').classList.remove('active')">Got it</button>
         </div>
     </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.hamburger').classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.hamburger').classList.remove('active');
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
