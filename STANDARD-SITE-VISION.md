@@ -87,3 +87,12 @@ A clean site that tells the story like they do.
 ---
 
 *"The Foundation for AI Context"*
+
+---
+
+## Design Notes
+
+**Gemini Badge Color** - The 4-color Google gradient (`#4285f4, #34a853, #fbbc05, #ea4335`) feels busy compared to clean solid badges. Consider:
+- Gemini blue: `#4285f4` (solid, matches Claude's solid orange)
+- Gemini gradient: Blue → purple (Gemini's own branding, not Google's rainbow)
+- Current rainbow says "Google" but different vibe from other badges
