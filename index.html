@@ -776,29 +776,7 @@
                 <h2 style="color: white; text-align: center; font-size: 1.5rem; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 0.1em;">Latest News</h2>
 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                    <!-- 20K Downloads -->
-                    <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
-                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                            <span style="background: var(--accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">MILESTONE</span>
-                            <span style="color: var(--muted); font-size: 0.8rem;">Jan 14, 2026</span>
-                        </div>
-                        <h3 style="color: var(--dark); font-size: 1.1rem; margin-bottom: 0.5rem;">FAF Surpasses 20,000 Downloads</h3>
-                        <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;">Combined npm downloads across faf-cli, claude-faf-mcp, faf-mcp, and grok-faf-mcp now exceed 20,000.</p>
-                        <a href="https://faf.one/blog/faf-hits-20k" style="color: var(--accent); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Read more →</a>
-                    </div>
-
-                    <!-- CERN/Zenodo Paper -->
-                    <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
-                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                            <span style="background: #1a1a1a; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">RESEARCH</span>
-                            <span style="color: var(--muted); font-size: 0.8rem;">Jan 14, 2026</span>
-                        </div>
-                        <h3 style="color: var(--dark); font-size: 1.1rem; margin-bottom: 0.5rem;">Academic Whitepaper on CERN/Zenodo</h3>
-                        <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;">Peer-citable technical paper published with DOI. Presents empirical validation across 10,000+ projects.</p>
-                        <a href="https://doi.org/10.5281/zenodo.18251362" style="color: var(--accent); font-size: 0.85rem; font-weight: 600; text-decoration: none;">View on Zenodo →</a>
-                    </div>
-
-                    <!-- grok-faf-mcp -->
+                    <!-- Slot 1: HOT NEWS - grok-faf-mcp -->
                     <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
                         <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
                             <span style="background: #FF6B35; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">FIRST</span>
@@ -807,6 +785,27 @@
                         <h3 style="color: var(--dark); font-size: 1.1rem; margin-bottom: 0.5rem;">grok-faf-mcp: Three Industry Firsts</h3>
                         <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;">First MCP for xAI Grok. First web-based MCP. Fastest growing FAF package with 100+ downloads overnight.</p>
                         <a href="https://grok-faf-mcp.vercel.app" style="color: var(--accent); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Try it live →</a>
+                    </div>
+
+                    <!-- Slot 2: CREDENTIAL - CERN/Zenodo Paper -->
+                    <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                            <span style="background: #1a1a1a; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">RESEARCH</span>
+                            <span style="color: var(--muted); font-size: 0.8rem;">Jan 14, 2026</span>
+                        </div>
+                        <h3 style="color: var(--dark); font-size: 1.1rem; margin-bottom: 0.5rem;">Academic Whitepaper on Zenodo</h3>
+                        <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;">Peer-citable technical paper with DOI. Repository used by NASA, NIH, and major universities.</p>
+                        <a href="https://doi.org/10.5281/zenodo.18251362" style="color: var(--accent); font-size: 0.85rem; font-weight: 600; text-decoration: none;">View on Zenodo →</a>
+                    </div>
+
+                    <!-- Slot 3: COUNTER - Downloads -->
+                    <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                            <span style="background: var(--accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">DOWNLOADS</span>
+                        </div>
+                        <h3 style="color: var(--dark); font-size: 1.1rem; margin-bottom: 0.5rem;">20,000+ npm Downloads</h3>
+                        <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;">Combined downloads across faf-cli, claude-faf-mcp, faf-mcp, and grok-faf-mcp.</p>
+                        <a href="https://faf.one/blog/faf-hits-20k" style="color: var(--accent); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Verify on npm →</a>
                     </div>
                 </div>
             </div>
