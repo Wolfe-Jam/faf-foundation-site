@@ -737,7 +737,7 @@
         <div class="container">
             <h1>FAF <span>Foundation</span></h1>
             <p class="subtitle">Stewards of the Foundational AI-context Format</p>
-            <p class="tagline">Open governance for an open standard</p>
+            <p class="tagline">IANA-registered · Universal AI-Context for any AI, human, or team</p>
             <div class="cta-buttons">
                 <a href="#join" class="btn btn-primary">Get Involved</a>
                 <a href="https://faf.one" class="btn btn-orange">faf.one</a>
@@ -797,7 +797,20 @@
             <div style="margin-top: 3rem; padding: 2rem; background: var(--bg-secondary); border-radius: 12px; text-align: center;">
                 <p style="color: var(--accent); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">The Solution</p>
                 <p style="color: var(--dark); font-size: 1.25rem; font-weight: 600;">One format. Every AI. Authored once, works everywhere.</p>
-                <p style="color: var(--gray); margin-top: 0.5rem;">That's what .faf was built for.</p>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                    <div>
+                        <p style="color: #ff6b6b; font-size: 0.85rem; margin: 0;">Before</p>
+                        <p style="color: var(--dark); font-size: 1.5rem; font-weight: bold; margin: 0;">29%</p>
+                        <p style="color: var(--muted); font-size: 0.8rem; margin: 0;">context understood</p>
+                    </div>
+                    <div style="font-size: 2rem; color: var(--muted); align-self: center;">→</div>
+                    <div>
+                        <p style="color: var(--accent); font-size: 0.85rem; margin: 0;">After .faf</p>
+                        <p style="color: var(--dark); font-size: 1.5rem; font-weight: bold; margin: 0;">99%</p>
+                        <p style="color: var(--muted); font-size: 0.8rem; margin: 0;">context understood</p>
+                    </div>
+                </div>
+                <p style="color: var(--gray); margin-top: 1rem; font-size: 0.9rem;">Setup time: 20+ minutes → under 3 seconds</p>
             </div>
 
             <blockquote style="margin: 3rem auto 0; max-width: 600px; text-align: center; padding: 1.5rem; border: none;">
@@ -925,6 +938,10 @@
 
                 <!-- Key Points -->
                 <div style="display: flex; flex-direction: column; justify-content: center; gap: 1.5rem;">
+                    <div style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; margin-bottom: 0.5rem;">
+                        <p style="color: var(--accent); font-weight: 600; font-size: 0.85rem; margin: 0 0 0.25rem;">The 50/50 Philosophy</p>
+                        <p style="color: var(--gray); font-size: 0.9rem; margin: 0;">Half technical (YAML for AI), half human-focused (markdown for you). Balance by design.</p>
+                    </div>
                     <div>
                         <h3 style="color: var(--dark); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
                             <span style="color: var(--accent);">01</span> Human-Readable
@@ -1010,19 +1027,19 @@
 
                 <!-- Stats -->
                 <div style="background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                    <h3 style="color: var(--accent); margin-bottom: 1.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Adoption</h3>
+                    <h3 style="color: var(--accent); margin-bottom: 1.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Validation</h3>
                     <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                         <div>
-                            <p style="color: var(--dark); font-size: 2rem; font-weight: bold; margin: 0;">20,000+</p>
-                            <p style="color: var(--muted); font-size: 0.85rem; margin: 0;">Total downloads</p>
+                            <p style="color: var(--dark); font-size: 2rem; font-weight: bold; margin: 0;">11,240+</p>
+                            <p style="color: var(--muted); font-size: 0.85rem; margin: 0;">Tests run</p>
                         </div>
                         <div>
-                            <p style="color: var(--dark); font-size: 2rem; font-weight: bold; margin: 0;">154</p>
-                            <p style="color: var(--muted); font-size: 0.85rem; margin: 0;">Validated framework types</p>
+                            <p style="color: var(--dark); font-size: 2rem; font-weight: bold; margin: 0;">9.3/10</p>
+                            <p style="color: var(--muted); font-size: 0.85rem; margin: 0;">Average rating</p>
                         </div>
                         <div>
-                            <p style="color: var(--dark); font-size: 2rem; font-weight: bold; margin: 0;">8+</p>
-                            <p style="color: var(--muted); font-size: 0.85rem; margin: 0;">Platform integrations</p>
+                            <p style="color: var(--dark); font-size: 2rem; font-weight: bold; margin: 0;">&lt;50ms</p>
+                            <p style="color: var(--muted); font-size: 0.85rem; margin: 0;">Processing time</p>
                         </div>
                     </div>
                 </div>
@@ -1158,6 +1175,11 @@ faf cursor export  # → .cursorrules</code></pre>
                     <h4>📄 Format Specification</h4>
                     <p>The official FAF specification document with examples and validation rules.</p>
                     <a href="https://github.com/Wolfe-Jam/faf/blob/main/DOT-FAF-FORMAT-SPEC.md" class="resource-link">Read Specification →</a>
+                </div>
+                <div class="resource-card">
+                    <h4>📰 Press Release</h4>
+                    <p>Overview of FAF format, the problem it solves, and adoption status.</p>
+                    <a href="https://faf.one/press-release" class="resource-link">Read Press Release →</a>
                 </div>
                 <div class="resource-card">
                     <h4>🦀 Rust SDK</h4>
