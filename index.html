@@ -720,7 +720,7 @@
             <ul class="nav-links">
                 <li><a href="#news">News</a></li>
                 <li><a href="#spec">Spec</a></li>
-                <li><a href="#adopters">Adopters</a></li>
+                <li><a href="#adopters">Adoption</a></li>
                 <li><a href="#integrate">Integrate</a></li>
                 <li><a href="#governance">Governance</a></li>
                 <li><a href="#join">Join</a></li>
@@ -741,8 +741,11 @@
             <p class="tagline">IANA-registered · Universal AI-Context for any AI, human, or team</p>
             <div class="cta-buttons">
                 <a href="#join" class="btn btn-primary">Get Involved</a>
+                <a href="https://github.com/Wolfe-Jam/faf-cli" class="btn btn-secondary" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25z"/></svg>
+                    Star faf-cli
+                </a>
                 <a href="https://faf.one" class="btn btn-orange">faf.one</a>
-                <a href="https://github.com/Wolfe-Jam/faf" class="btn btn-secondary">View Specification</a>
             </div>
 
             <!-- Credibility Badges -->
@@ -776,46 +779,99 @@
                 <h2 style="color: white; text-align: center; font-size: 1.5rem; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 0.1em;">Latest News</h2>
 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                    <!-- Slot 1: HOT NEWS - grok-faf-mcp -->
+                    <!-- Slot 1: 50K Downloads -->
                     <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
                         <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                            <span style="background: #FF6B35; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">FIRST</span>
-                            <span style="color: var(--muted); font-size: 0.8rem;">Jan 2026</span>
+                            <span style="background: #FF6B35; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">MILESTONE</span>
+                            <span style="color: var(--muted); font-size: 0.8rem;">Apr 2026</span>
                         </div>
-                        <h3 style="color: var(--dark); font-size: 1.1rem; margin-bottom: 0.5rem;">grok-faf-mcp: Three Industry Firsts</h3>
-                        <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;">First MCP for xAI Grok. First web-based MCP. Fastest growing FAF package with 100+ downloads overnight.</p>
+                        <h3 style="color: var(--dark); font-size: 1.1rem; margin-bottom: 0.5rem;">50,000 Downloads</h3>
+                        <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;">16 packages across npm, PyPI, and crates.io. 5 MCP servers registered. 3 compiler targets shipping.</p>
                         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                            <a href="https://grok-faf-mcp.vercel.app" style="color: #FF6B35; font-size: 0.85rem; font-weight: 600; text-decoration: none;">Try it live →</a>
-                            <a href="https://faf.one/blog/faf-hits-20k" style="color: var(--accent); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Read more →</a>
+                            <a href="https://faf.one/downloads" style="color: #FF6B35; font-size: 0.85rem; font-weight: 600; text-decoration: none;">All packages →</a>
+                            <a href="https://faf.one/blog/thirty-thousand" style="color: var(--accent); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Read more →</a>
                         </div>
                     </div>
 
-                    <!-- Slot 2: CREDENTIAL - CERN/Zenodo Paper -->
+                    <!-- Slot 2: MCPaaS SDK -->
                     <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
                         <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                            <span style="background: #1a1a1a; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">RESEARCH</span>
-                            <span style="color: var(--muted); font-size: 0.8rem;">Jan 14, 2026</span>
+                            <span style="background: var(--accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">LAUNCH</span>
+                            <span style="color: var(--muted); font-size: 0.8rem;">Mar 2026</span>
                         </div>
-                        <h3 style="color: var(--dark); font-size: 1.1rem; margin-bottom: 0.5rem;">Academic Whitepaper on Zenodo</h3>
-                        <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;">Peer-citable technical paper with DOI. Repository used by NASA, NIH, and major universities.</p>
+                        <h3 style="color: var(--dark); font-size: 1.1rem; margin-bottom: 0.5rem;">MCPaaS SDK Shipped</h3>
+                        <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;"><code style="background: #f5f0e8; padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.85rem;">npm install mcpaas</code> — typed TypeScript client for AI context at the edge. Zero deps.</p>
                         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                            <a href="https://doi.org/10.5281/zenodo.18251362" style="color: #1a1a1a; font-size: 0.85rem; font-weight: 600; text-decoration: none;">View on Zenodo →</a>
-                            <a href="https://faf.one/blog/faf-hits-20k" style="color: var(--accent); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Read more →</a>
+                            <a href="https://www.npmjs.com/package/mcpaas" style="color: #cb3837; font-size: 0.85rem; font-weight: 600; text-decoration: none;">View on npm →</a>
+                            <a href="https://mcpaas.live" style="color: var(--accent); font-size: 0.85rem; font-weight: 600; text-decoration: none;">mcpaas.live →</a>
                         </div>
                     </div>
 
-                    <!-- Slot 3: COUNTER - Downloads -->
+                    <!-- Slot 3: Awesome x4 -->
                     <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
                         <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                            <span style="background: var(--accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">DOWNLOADS</span>
+                            <span style="background: #1a1a1a; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">RECOGNITION</span>
+                            <span style="color: var(--muted); font-size: 0.8rem;">Mar 2026</span>
                         </div>
-                        <h3 style="color: var(--dark); font-size: 1.1rem; margin-bottom: 0.5rem;">50,000+ Downloads</h3>
-                        <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;">Combined downloads across 9 packages including faf-cli, claude-faf-mcp, faf-mcp, wjttc, and more.</p>
+                        <h3 style="color: var(--dark); font-size: 1.1rem; margin-bottom: 0.5rem;">FAF is Awesome (x4)</h3>
+                        <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;">Merged into 4 awesome-lists. In Rust We Trust — FAF goes all-in on Rust, Zig, and WASM compilers.</p>
                         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                            <a href="https://www.npmjs.com/package/faf-cli" style="color: #cb3837; font-size: 0.85rem; font-weight: 600; text-decoration: none;">View on npm →</a>
-                            <a href="https://faf.one/blog/faf-hits-20k" style="color: var(--accent); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Read more →</a>
+                            <a href="https://faf.one/blog/its-official" style="color: #1a1a1a; font-size: 0.85rem; font-weight: 600; text-decoration: none;">Read more →</a>
+                            <a href="https://faf.one/blog/in-rust-we-trust" style="color: var(--accent); font-size: 0.85rem; font-weight: 600; text-decoration: none;">In Rust We Trust →</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- From the Blog -->
+    <section style="padding: 4rem 0; background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title">From the Blog</h2>
+            <p class="section-subtitle">74 posts and counting on faf.one/blog</p>
+
+            <div style="max-width: 800px; margin: 2rem auto 0;">
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <a href="https://faf.one/blog/mk4-parity-edition" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: var(--white); border-radius: 8px; text-decoration: none; transition: border-color 0.3s; border: 1px solid var(--border);">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="background: var(--accent); color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; white-space: nowrap;">RELEASE</span>
+                            <span style="color: var(--dark); font-weight: 600; font-size: 0.95rem;">The Mk4 Parity Edition</span>
+                        </div>
+                        <span style="color: var(--muted); font-size: 0.8rem; white-space: nowrap;">Mar 29</span>
+                    </a>
+                    <a href="https://faf.one/blog/v6-new-era" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: var(--white); border-radius: 8px; text-decoration: none; transition: border-color 0.3s; border: 1px solid var(--border);">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="background: #FF6B35; color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; white-space: nowrap;">LAUNCH</span>
+                            <span style="color: var(--dark); font-weight: 600; font-size: 0.95rem;">V6 New Era — The Standard for AI Context</span>
+                        </div>
+                        <span style="color: var(--muted); font-size: 0.8rem; white-space: nowrap;">Mar 28</span>
+                    </a>
+                    <a href="https://faf.one/blog/its-official" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: var(--white); border-radius: 8px; text-decoration: none; transition: border-color 0.3s; border: 1px solid var(--border);">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="background: #1a1a1a; color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; white-space: nowrap;">MILESTONE</span>
+                            <span style="color: var(--dark); font-weight: 600; font-size: 0.95rem;">It's Official — FAF is Awesome (x4)</span>
+                        </div>
+                        <span style="color: var(--muted); font-size: 0.8rem; white-space: nowrap;">Mar 22</span>
+                    </a>
+                    <a href="https://faf.one/blog/globe-edition" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: var(--white); border-radius: 8px; text-decoration: none; transition: border-color 0.3s; border: 1px solid var(--border);">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="background: var(--accent); color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; white-space: nowrap;">RELEASE</span>
+                            <span style="color: var(--dark); font-weight: 600; font-size: 0.95rem;">The Globe Edition — Where Your Code Runs</span>
+                        </div>
+                        <span style="color: var(--muted); font-size: 0.8rem; white-space: nowrap;">Mar 27</span>
+                    </a>
+                    <a href="https://faf.one/blog/in-rust-we-trust" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: var(--white); border-radius: 8px; text-decoration: none; transition: border-color 0.3s; border: 1px solid var(--border);">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="background: #FF6B35; color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; white-space: nowrap;">LAUNCH</span>
+                            <span style="color: var(--dark); font-weight: 600; font-size: 0.95rem;">In Rust We Trust — FAF Goes All-In</span>
+                        </div>
+                        <span style="color: var(--muted); font-size: 0.8rem; white-space: nowrap;">Mar 7</span>
+                    </a>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="https://faf.one/blog" style="color: var(--accent); font-weight: 600; text-decoration: none; font-size: 1rem;">View all 74 posts on faf.one/blog →</a>
                 </div>
             </div>
         </div>
@@ -1027,8 +1083,8 @@
     <!-- Who Uses FAF / Adopters Section -->
     <section class="adopters" id="adopters" style="padding: 5rem 0; background: var(--bg-secondary);">
         <div class="container">
-            <h2 class="section-title">Who Uses FAF</h2>
-            <p class="section-subtitle">Official implementations and community adoption</p>
+            <h2 class="section-title">Adoption</h2>
+            <p class="section-subtitle">Official implementations and ecosystem reach</p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
                 <!-- Official Implementations -->
@@ -1043,10 +1099,31 @@
                             </div>
                         </div>
                         <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="background: var(--dark); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">MCP</span>
+                            <div>
+                                <a href="https://www.npmjs.com/package/grok-faf-mcp" style="color: var(--dark); font-weight: 600; text-decoration: none;">grok-faf-mcp</a>
+                                <p style="color: var(--muted); font-size: 0.85rem; margin: 0;">First MCP for xAI Grok</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="background: var(--dark); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">MCP</span>
+                            <div>
+                                <a href="https://pypi.org/project/gemini-faf-mcp/" style="color: var(--dark); font-weight: 600; text-decoration: none;">gemini-faf-mcp</a>
+                                <p style="color: var(--muted); font-size: 0.85rem; margin: 0;">Google Gemini MCP (PyPI)</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
                             <span style="background: var(--dark); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">CLI</span>
                             <div>
                                 <a href="https://www.npmjs.com/package/faf-cli" style="color: var(--dark); font-weight: 600; text-decoration: none;">faf-cli</a>
                                 <p style="color: var(--muted); font-size: 0.85rem; margin: 0;">21,000+ downloads</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="background: var(--dark); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">SDK</span>
+                            <div>
+                                <a href="https://www.npmjs.com/package/mcpaas" style="color: var(--dark); font-weight: 600; text-decoration: none;">mcpaas</a>
+                                <p style="color: var(--muted); font-size: 0.85rem; margin: 0;">MCPaaS SDK — typed TypeScript client</p>
                             </div>
                         </div>
                         <div style="display: flex; align-items: center; gap: 1rem;">
@@ -1059,23 +1136,44 @@
                     </div>
                 </div>
 
-                <!-- Projects Using FAF -->
+                <!-- By the Numbers -->
                 <div style="background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                    <h3 style="color: var(--accent); margin-bottom: 1.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Projects Using FAF</h3>
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div>
-                            <a href="https://theblockchain.ai" style="color: var(--dark); font-weight: 600; text-decoration: none;">theblockchain.ai</a>
-                            <p style="color: var(--muted); font-size: 0.85rem; margin: 0;">Production deployment</p>
+                    <h3 style="color: var(--accent); margin-bottom: 1.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">By the Numbers</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div style="text-align: center;">
+                            <p style="color: var(--dark); font-size: 1.75rem; font-weight: bold; margin: 0;">50K+</p>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0;">Downloads</p>
                         </div>
-                        <div>
-                            <span style="color: var(--dark); font-weight: 600;">GALLERY-SVELTE</span>
-                            <p style="color: var(--muted); font-size: 0.85rem; margin: 0;">Svelte component system</p>
+                        <div style="text-align: center;">
+                            <p style="color: var(--dark); font-size: 1.75rem; font-weight: bold; margin: 0;">16</p>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0;">Packages</p>
                         </div>
-                        <div>
-                            <span style="color: var(--dark); font-weight: 600;">FAF-Voice</span>
-                            <p style="color: var(--muted); font-size: 0.85rem; margin: 0;">Voice AI context layer</p>
+                        <div style="text-align: center;">
+                            <p style="color: var(--dark); font-size: 1.75rem; font-weight: bold; margin: 0;">5</p>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0;">MCP Servers</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <p style="color: var(--dark); font-size: 1.75rem; font-weight: bold; margin: 0;">3</p>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0;">Registries</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <p style="color: var(--dark); font-size: 1.75rem; font-weight: bold; margin: 0;">3</p>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0;">Compilers</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <p style="color: var(--dark); font-size: 1.75rem; font-weight: bold; margin: 0;">1,232</p>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0;">Tests passing</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <p style="color: var(--dark); font-size: 1.75rem; font-weight: bold; margin: 0;">721</p>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0;">Namepoints</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <p style="color: var(--dark); font-size: 1.75rem; font-weight: bold; margin: 0;">300+</p>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0;">Edge locations</p>
                         </div>
                     </div>
+                    <p style="color: var(--muted); font-size: 0.8rem; margin-top: 1.25rem; font-style: italic; border-top: 1px solid var(--border); padding-top: 1rem;">.faf is a config file — developers use it, they don't announce it. Downloads are the signal.</p>
                 </div>
 
                 <!-- Stats -->
@@ -1083,7 +1181,7 @@
                     <h3 style="color: var(--accent); margin-bottom: 1.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Validation</h3>
                     <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                         <div>
-                            <p style="color: var(--dark); font-size: 2rem; font-weight: bold; margin: 0;">1,051</p>
+                            <p style="color: var(--dark); font-size: 2rem; font-weight: bold; margin: 0;">1,232</p>
                             <p style="color: var(--muted); font-size: 0.85rem; margin: 0;">Tests passing (faf-cli)</p>
                         </div>
                         <div>
@@ -1269,6 +1367,11 @@ faf cursor export  # → .cursorrules</code></pre>
                     <a href="https://www.npmjs.com/package/grok-faf-mcp" class="resource-link">View on npm →</a>
                 </div>
                 <div class="resource-card">
+                    <h4>💎 Gemini MCP Server</h4>
+                    <p>MCP server for Google Gemini. Published on PyPI.</p>
+                    <a href="https://pypi.org/project/gemini-faf-mcp/" class="resource-link">View on PyPI →</a>
+                </div>
+                <div class="resource-card">
                     <h4>⚡ MCPaaS</h4>
                     <p>MCP as a Service — The Endpoint for Context. Zig-WASM powered, 300+ edges.</p>
                     <a href="https://mcpaas.live" class="resource-link">Visit mcpaas.live →</a>
@@ -1278,6 +1381,164 @@ faf cursor export  # → .cursorrules</code></pre>
                     <p>Command-line interface for creating and validating FAF files.</p>
                     <a href="https://fafcli.dev" class="resource-link">Visit fafcli.dev →</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosystem Section -->
+    <section style="padding: 5rem 0; background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title">Ecosystem</h2>
+            <p class="section-subtitle">16 packages across 3 registries — all open source</p>
+
+            <!-- Star CTA -->
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <a href="https://github.com/Wolfe-Jam/faf-cli" style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--dark); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s;">
+                    <svg width="18" height="18" viewBox="0 0 16 16" fill="#FFD700"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25z"/></svg>
+                    Star faf-cli on GitHub
+                </a>
+                <p style="color: var(--muted); font-size: 0.85rem; margin-top: 0.75rem;">The CLI that started it all</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+
+                <!-- MCP Servers -->
+                <div style="background: var(--white); padding: 2rem; border-radius: 12px; border-top: 4px solid var(--accent);">
+                    <h3 style="color: var(--dark); margin-bottom: 1.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">MCP Servers</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="https://github.com/Wolfe-Jam/claude-faf-mcp" style="color: var(--dark); font-weight: 600; text-decoration: none;">claude-faf-mcp</a>
+                                <span style="color: var(--muted); font-size: 0.75rem;">npm</span>
+                            </div>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0.25rem 0 0;">Anthropic MCP #2759</p>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="https://github.com/Wolfe-Jam/grok-faf-mcp" style="color: var(--dark); font-weight: 600; text-decoration: none;">grok-faf-mcp</a>
+                                <span style="color: var(--muted); font-size: 0.75rem;">npm</span>
+                            </div>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0.25rem 0 0;">First MCP for xAI Grok</p>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="https://github.com/Wolfe-Jam/gemini-faf-mcp" style="color: var(--dark); font-weight: 600; text-decoration: none;">gemini-faf-mcp</a>
+                                <span style="color: var(--muted); font-size: 0.75rem;">PyPI</span>
+                            </div>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0.25rem 0 0;">Google Gemini MCP</p>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="https://github.com/Wolfe-Jam/faf-mcp" style="color: var(--dark); font-weight: 600; text-decoration: none;">faf-mcp</a>
+                                <span style="color: var(--muted); font-size: 0.75rem;">npm</span>
+                            </div>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0.25rem 0 0;">Core FAF MCP server</p>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="https://github.com/Wolfe-Jam/WJTTC" style="color: var(--dark); font-weight: 600; text-decoration: none;">WJTTC</a>
+                                <span style="color: var(--muted); font-size: 0.75rem;">npm</span>
+                            </div>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0.25rem 0 0;">MCP server certification</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CLI & SDKs -->
+                <div style="background: var(--white); padding: 2rem; border-radius: 12px; border-top: 4px solid #FF6B35;">
+                    <h3 style="color: var(--dark); margin-bottom: 1.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">CLI & SDKs</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="https://github.com/Wolfe-Jam/faf-cli" style="color: var(--dark); font-weight: 600; text-decoration: none;">faf-cli</a>
+                                <span style="color: var(--muted); font-size: 0.75rem;">npm + Homebrew</span>
+                            </div>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0.25rem 0 0;">Universal CLI — 21,000+ downloads</p>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="https://github.com/Wolfe-Jam/mcpaas-sdk" style="color: var(--dark); font-weight: 600; text-decoration: none;">mcpaas</a>
+                                <span style="color: var(--muted); font-size: 0.75rem;">npm</span>
+                            </div>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0.25rem 0 0;">MCPaaS SDK — typed TypeScript client</p>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="https://github.com/Wolfe-Jam/faf-rust-sdk" style="color: var(--dark); font-weight: 600; text-decoration: none;">faf-rust-sdk</a>
+                                <span style="color: var(--muted); font-size: 0.75rem;">crates.io</span>
+                            </div>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0.25rem 0 0;">Rust SDK — owns "ai-context" keyword</p>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="https://github.com/Wolfe-Jam/faf-python-sdk" style="color: var(--dark); font-weight: 600; text-decoration: none;">faf-python-sdk</a>
+                                <span style="color: var(--muted); font-size: 0.75rem;">PyPI</span>
+                            </div>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0.25rem 0 0;">Python SDK with validation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Infrastructure -->
+                <div style="background: var(--white); padding: 2rem; border-radius: 12px; border-top: 4px solid var(--dark);">
+                    <h3 style="color: var(--dark); margin-bottom: 1.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Infrastructure</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="https://mcpaas.live" style="color: var(--dark); font-weight: 600; text-decoration: none;">MCPaaS</a>
+                                <span style="color: var(--muted); font-size: 0.75rem;">Cloudflare</span>
+                            </div>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0.25rem 0 0;">MCP as a Service — 300+ edges, 721 namepoints</p>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="https://github.com/Wolfe-Jam/faf-wasm-sdk" style="color: var(--dark); font-weight: 600; text-decoration: none;">faf-wasm-sdk</a>
+                                <span style="color: var(--muted); font-size: 0.75rem;">npm</span>
+                            </div>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0.25rem 0 0;">Browser WASM runtime — 281KB</p>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="https://github.com/Wolfe-Jam/xai-faf-zig" style="color: var(--dark); font-weight: 600; text-decoration: none;">xai-faf-zig</a>
+                                <span style="color: var(--muted); font-size: 0.75rem;">WASM</span>
+                            </div>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0.25rem 0 0;">Mk4 Zig scoring engine — 3.9KB</p>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="https://github.com/Wolfe-Jam/xai-faf-rust" style="color: var(--dark); font-weight: 600; text-decoration: none;">xai-faf-rust</a>
+                                <span style="color: var(--muted); font-size: 0.75rem;">Rust</span>
+                            </div>
+                            <p style="color: var(--muted); font-size: 0.8rem; margin: 0.25rem 0 0;">FAFb compiler + Mk4 engine</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registry stats -->
+            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 3rem; padding: 1.5rem; background: var(--white); border-radius: 12px;">
+                <div style="text-align: center;">
+                    <a href="https://www.npmjs.com/~wolfe-jam" style="text-decoration: none;">
+                        <p style="color: #cb3837; font-weight: bold; font-size: 1.5rem; margin: 0;">~41.5K</p>
+                        <p style="color: var(--muted); font-size: 0.8rem; margin: 0;">npm</p>
+                    </a>
+                </div>
+                <div style="text-align: center;">
+                    <a href="https://pypi.org/user/wolfe-jam/" style="text-decoration: none;">
+                        <p style="color: #3775A9; font-weight: bold; font-size: 1.5rem; margin: 0;">~8.2K</p>
+                        <p style="color: var(--muted); font-size: 0.8rem; margin: 0;">PyPI</p>
+                    </a>
+                </div>
+                <div style="text-align: center;">
+                    <a href="https://crates.io/users/Wolfe-Jam" style="text-decoration: none;">
+                        <p style="color: #E57324; font-weight: bold; font-size: 1.5rem; margin: 0;">~460</p>
+                        <p style="color: var(--muted); font-size: 0.8rem; margin: 0;">crates.io</p>
+                    </a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://faf.one/downloads" style="color: var(--accent); font-weight: 600; text-decoration: none;">Full breakdown on faf.one/downloads →</a>
             </div>
         </div>
     </section>
@@ -1472,15 +1733,29 @@ faf cursor export  # → .cursorrules</code></pre>
                 <div class="timeline-item">
                     <div class="timeline-date">Feb 27 2026</div>
                     <div class="timeline-content">
-                        <h4>30,000 Downloads <span style="font-size: 0.75rem; background: #FF6B35; color: white; padding: 0.15rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">NEW</span></h4>
-                        <p>9 npm packages, 2 PyPI packages, 1 crate. 33k+ across 3 registries.</p>
+                        <h4>30,000 Downloads</h4>
+                        <p>Milestone reached across npm, PyPI, and crates.io.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">Feb 2026</div>
+                    <div class="timeline-date">Mar 2026</div>
                     <div class="timeline-content">
-                        <h4>Foundation Growing <span style="font-size: 0.75rem; background: var(--accent); color: white; padding: 0.15rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">NOW</span></h4>
-                        <p>29 npm packages registered. 3 registries. Founding sponsors welcome.</p>
+                        <h4>MCPaaS SDK Shipped</h4>
+                        <p><code>npm install mcpaas</code> — typed TypeScript client for the MCPaaS platform. Zero deps.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Mar 2026</div>
+                    <div class="timeline-content">
+                        <h4>Bun Migration</h4>
+                        <p>faf-cli migrates to Bun. 1,232 tests, 0 skip, 0 fail. Jest removed.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Apr 2026</div>
+                    <div class="timeline-content">
+                        <h4>50,000 Downloads <span style="font-size: 0.75rem; background: #FF6B35; color: white; padding: 0.15rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">NEW</span></h4>
+                        <p>16 packages across npm, PyPI, and crates.io. 5 MCP servers registered.</p>
                     </div>
                 </div>
             </div>
