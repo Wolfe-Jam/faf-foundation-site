@@ -1,3 +1,32 @@
+<!-- faf:start -->
+<!-- faf: faf-foundation-site | HTML | html | Official website for the FAF Foundation at [foundation.faf.one](https://foundation.faf.one) -->
+<!-- faf: claim=project.faf | family=FAF -->
+
+# CLAUDE.md — faf-foundation-site
+
+## What This Is
+
+Official website for the FAF Foundation at [foundation.faf.one](https://foundation.faf.one)
+
+## Stack
+
+- **Language:** HTML
+- **Hosting:** Cloudflare Pages
+
+## Context
+
+- **Who:** Developers, contributors, and the public learning about the FAF Foundation and the .faf standard
+- **What:** The FAF Foundation serves as stewards of the Foundational AI-context Format (FAF) - an open, vendor-neutral standard for AI project context.
+- **Why:** A public home for the FAF Foundation, institutional steward of the IANA-registered .faf context formats
+- **Where:** foundation.faf.one
+- **When:** Production - live
+- **How:** Static HTML site deployed to Cloudflare Pages
+
+---
+
+*STATUS: BI-SYNC ACTIVE — 2026-06-20T01:41:09.596Z*
+<!-- faf:end -->
+
 # CLAUDE.md - FAF Foundation Site
 
 ## Project DNA
