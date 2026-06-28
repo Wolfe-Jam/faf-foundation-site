@@ -37,7 +37,7 @@ Static website for the FAF Foundation at foundation.faf.one - stewards of the Fo
 
 - **Type**: Static HTML site (no build system)
 - **Stack**: HTML, CSS, vanilla JavaScript
-- **Deployment**: Vercel at foundation.faf.one
+- **Deployment**: Cloudflare Pages at foundation.faf.one (manual: `wrangler pages deploy <export> --project-name=faf-foundation`)
 - **Design System**: canonical FAF-Green (--accent: #00aa55)
 
 ## Key Files
