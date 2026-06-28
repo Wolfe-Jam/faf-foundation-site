@@ -38,7 +38,7 @@ Static website for the FAF Foundation at foundation.faf.one - stewards of the Fo
 - **Type**: Static HTML site (no build system)
 - **Stack**: HTML, CSS, vanilla JavaScript
 - **Deployment**: Vercel at foundation.faf.one
-- **Design System**: fafcli.dev colors (--accent: #00bf63)
+- **Design System**: canonical FAF-Green (--accent: #00aa55)
 
 ## Key Files
 
@@ -57,8 +57,8 @@ open index.html          # Preview locally
 ## Design Tokens
 
 ```css
---accent: #00bf63        /* Foundation green */
---accent-hover: #00a855
+--accent: #00aa55        /* canonical FAF-Green */
+--accent-hover: #008040  /* canonical FAF-Green dark */
 --accent-bright: #00ff88
 --bg-primary: #fefcf8
 --bg-secondary: #f9f6f1
